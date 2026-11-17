@@ -22,6 +22,8 @@ export interface PlanCardProps {
   regionTitle?: string;
   /** Checkmark items; pass JSX to mix bold lead-ins and footnote sups */
   features?: ReactNode[];
+  /** Navy banner with watch icon, e.g. "Watch plan & Phone Protection add-on included" */
+  addonBanner?: string;
   /** Renders the navy "Price Freeze Promise" banner */
   priceFreeze?: boolean;
   /** Legal footnote, e.g. "Requires 2-year term¹. Conditions apply." */
@@ -43,6 +45,7 @@ export function PlanCard({
   regularPrice,
   regionTitle,
   features,
+  addonBanner,
   priceFreeze = false,
   conditions,
   ctaLabel,
@@ -98,6 +101,16 @@ export function PlanCard({
         )}
 
         {children}
+
+        {addonBanner && (
+          <div className="fm-plan-card-freeze fm-plan-card-addon">
+            <Icon name="watch" size={40} className="fm-plan-card-addon-icon" />
+            <span className="fm-plan-card-freeze-text">
+              {addonBanner}
+              <Icon name="chevronRight" size={16} />
+            </span>
+          </div>
+        )}
 
         {priceFreeze && (
           <div className="fm-plan-card-freeze">

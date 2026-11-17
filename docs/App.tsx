@@ -199,6 +199,32 @@ export function App() {
             ]}
             ctaLabel="Choose This Plan"
           />
+          <PlanCard
+            planTag="Total Freedom plan"
+            dataAllowance="250GB"
+            speedBadge="5G⁵"
+            price="45"
+            priceFootnote="15"
+            qualifier="with Digital Discount"
+            regionTitle="Canada & Roam Beyond"
+            addonBanner="Watch plan & basic Phone Protection add-on included"
+            priceFreeze
+            features={[
+              <>
+                <strong>250GB data in Canada-U.S.-Mexico.</strong> Unlimited
+                data at reduced speeds thereafter<sup>4</sup>
+              </>,
+              <>
+                <strong>50GB data</strong> in 120+ Roam Beyond global
+                destinations<sup>8</sup>
+              </>,
+              <>
+                <strong>Unlimited talk &amp; text</strong> in Canada and 120+
+                global destinations
+              </>,
+            ]}
+            ctaLabel="Choose This Plan"
+          />
         </div>
       </section>
     </div>

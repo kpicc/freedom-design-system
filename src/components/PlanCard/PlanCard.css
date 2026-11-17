@@ -216,6 +216,16 @@
   }
 }
 
+.fm-plan-card-addon .fm-plan-card-addon-icon {
+  color: var(--fm-color-brand-500);
+  flex-shrink: 0;
+}
+
+.fm-plan-card-addon .fm-plan-card-freeze-text {
+  font-size: var(--fm-font-size-lg);
+  font-weight: var(--fm-font-weight-medium);
+}
+
 .fm-plan-card-freeze-badge {
   display: flex;
   align-items: center;
