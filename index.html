@@ -4,9 +4,107 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Freedom Mobile Design System</title>
+    <style>
+      .proto-header {
+        background: #ffffff;
+        border-bottom: 1px solid #dedede;
+        padding: 12px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: 'Ambra', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .proto-header a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .proto-header a:hover { text-decoration: underline; }
+      .proto-view-toggle {
+        display: inline-flex;
+        border: 1px solid #dedede;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+      .proto-view-toggle button {
+        border: none;
+        background: #ffffff;
+        color: #000000;
+        font: inherit;
+        font-size: 14px;
+        padding: 4px 16px;
+        cursor: pointer;
+      }
+      .proto-view-toggle button.active {
+        background: #012f4c;
+        color: #ffffff;
+      }
+      .proto-device {
+        display: none;
+        margin: 32px auto;
+        width: 390px;
+        height: 844px;
+        border: 12px solid #1e1e1e;
+        border-radius: 44px;
+        overflow: hidden;
+        position: relative;
+        background: #ffffff;
+        box-shadow: 0 24px 48px rgba(0, 0, 0, 0.18);
+      }
+      .proto-device::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 140px;
+        height: 26px;
+        background: #1e1e1e;
+        border-radius: 0 0 16px 16px;
+        z-index: 2;
+      }
+      .proto-device iframe {
+        width: 100%;
+        height: calc(100% - 32px);
+        margin-top: 32px;
+        border: none;
+      }
+      body.proto-mobile #root { display: none; }
+      body.proto-mobile .proto-device { display: block; }
+      body.proto-frame .proto-header { display: none; }
+    </style>
   </head>
   <body>
+    <header class="proto-header">
+      <a href="/">&larr; Back to prototypes</a>
+      <div class="proto-view-toggle">
+        <button type="button" data-view="desktop" class="active">Desktop</button>
+        <button type="button" data-view="mobile">Mobile</button>
+      </div>
+    </header>
     <div id="root"></div>
+    <div class="proto-device"><iframe title="Mobile preview"></iframe></div>
+    <script>
+      (function () {
+        if (new URLSearchParams(location.search).has('frame')) {
+          document.body.classList.add('proto-frame');
+          return;
+        }
+        var buttons = document.querySelectorAll('.proto-view-toggle button');
+        var iframe = document.querySelector('.proto-device iframe');
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var mobile = btn.dataset.view === 'mobile';
+            document.body.classList.toggle('proto-mobile', mobile);
+            if (mobile && !iframe.src) {
+              iframe.src = location.origin + location.pathname + '?frame=1';
+            }
+            buttons.forEach(function (b) { b.classList.toggle('active', b === btn); });
+          });
+        });
+      })();
+    </script>
     <script type="module" src="/docs/main.tsx"></script>
   </body>
 </html>

@@ -2,6 +2,8 @@ import {
   Badge,
   Button,
   Card,
+  Icon,
+  iconNames,
   Input,
   PlanCard,
   Stack,
@@ -67,6 +69,18 @@ export function App() {
             <p className="docs-type-spec">Regular · 12px → 14px · Disclaimers, footnotes</p>
           </div>
         </Stack>
+      </section>
+
+      <section>
+        <h2>Icons</h2>
+        <div className="docs-icons">
+          {iconNames.map((name) => (
+            <div className="docs-icon" key={name}>
+              <Icon name={name} size={24} />
+              <span>{name}</span>
+            </div>
+          ))}
+        </div>
       </section>
 
       <section>
