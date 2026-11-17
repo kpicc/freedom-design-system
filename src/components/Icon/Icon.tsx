@@ -50,8 +50,8 @@ export function Icon({
         width: size,
         height: size,
         backgroundColor: color ?? 'currentColor',
-        WebkitMaskImage: url ? `url(${url})` : undefined,
-        maskImage: url ? `url(${url})` : undefined,
+        WebkitMaskImage: url ? `url("${url}")` : undefined,
+        maskImage: url ? `url("${url}")` : undefined,
         ...style,
       }}
       {...rest}
