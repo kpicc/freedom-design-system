@@ -1,0 +1,18 @@
+.fm-card {
+  font-family: var(--fm-font-family-sans);
+  background-color: var(--fm-surface-default);
+  border-radius: var(--fm-radius-large);
+  padding: var(--fm-spacing-6);
+  border: 1px solid var(--fm-color-gray-300);
+}
+
+.fm-card--none {
+  box-shadow: none;
+}
+.fm-card--small {
+  box-shadow: var(--fm-shadow-small);
+}
+
+.fm-card--flush {
+  padding: 0;
+}

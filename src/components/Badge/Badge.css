@@ -1,0 +1,31 @@
+.fm-badge {
+  font-family: var(--fm-font-family-sans);
+  font-size: var(--fm-font-size-xs);
+  font-weight: var(--fm-font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--fm-spacing-1) var(--fm-spacing-2);
+  border-radius: var(--fm-radius-small);
+}
+
+.fm-badge--promo {
+  background-color: var(--fm-color-brand-500);
+  color: var(--fm-color-white);
+}
+
+.fm-badge--info {
+  background-color: var(--fm-color-navy-50);
+  color: var(--fm-color-navy-600);
+}
+
+.fm-badge--success {
+  background-color: var(--fm-color-success);
+  color: var(--fm-color-white);
+}
+
+.fm-badge--neutral {
+  background-color: var(--fm-color-gray-200);
+  color: var(--fm-text-secondary);
+}

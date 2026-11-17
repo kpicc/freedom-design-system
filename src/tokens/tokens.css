@@ -1,0 +1,140 @@
+/* Freedom Mobile design tokens — CSS custom properties.
+ * Source of truth mirrors src/tokens/*.ts. Keep both in sync. */
+
+/* Ambra Sans Text — licensed typeface, served from src/fonts/ */
+@font-face {
+  font-family: 'Ambra';
+  src: url('../fonts/Ambra-Sans-Text-Regular.1f8155e8.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ambra';
+  src: url('../fonts/Ambra-Sans-Text-Bold.b9e77cbd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AmbraBook';
+  src: url('../fonts/Ambra-Sans-Text-Book.e8d1fb11.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Brand orange */
+  --fm-color-brand-50: #FDF3EB;
+  --fm-color-brand-100: #FAE0CC;
+  --fm-color-brand-200: #F5C199;
+  --fm-color-brand-300: #F09A5B;
+  --fm-color-brand-400: #ED6B1F;
+  --fm-color-brand-500: #DB5C05;
+  --fm-color-brand-600: #C35500;
+  --fm-color-brand-700: #9A4200;
+  --fm-color-brand-800: #6E2F00;
+  --fm-color-brand-900: #421C00;
+  --fm-color-brand-950: #290F00;
+
+  /* Navy */
+  --fm-color-navy-50: #EBF4FA;
+  --fm-color-navy-100: #CCE2F0;
+  --fm-color-navy-200: #99C4DD;
+  --fm-color-navy-300: #66A6C9;
+  --fm-color-navy-400: #3388B6;
+  --fm-color-navy-500: #156BA3;
+  --fm-color-navy-600: #0F5687;
+  --fm-color-navy-700: #0A4166;
+  --fm-color-navy-800: #052B44;
+  --fm-color-navy-900: #012F4C;
+  --fm-color-navy-950: #011E30;
+
+  /* Gray */
+  --fm-color-gray-50: #F8F9FA;
+  --fm-color-gray-100: #F5F5F5;
+  --fm-color-gray-200: #F2F2F2;
+  --fm-color-gray-300: #E0E0E0;
+  --fm-color-gray-400: #DEDEDE;
+  --fm-color-gray-500: #CECECE;
+  --fm-color-gray-600: #999999;
+  --fm-color-gray-700: #8F8F8F;
+  --fm-color-gray-800: #4E4E4E;
+  --fm-color-gray-900: #1A1A1A;
+  --fm-color-gray-950: #000000;
+
+  /* Status */
+  --fm-color-success: #2E7D32;
+  --fm-color-warning: #ED6C02;
+  --fm-color-danger: #C62828;
+  --fm-color-info: #156BA3;
+  --fm-color-white: #FFFFFF;
+  --fm-color-black: #000000;
+
+  /* Semantic */
+  --fm-action-primary: var(--fm-color-brand-500);
+  --fm-action-primary-hover: var(--fm-color-black);
+  --fm-action-primary-pressed: var(--fm-color-brand-600);
+  --fm-link: var(--fm-color-navy-500);
+  --fm-link-hover: var(--fm-color-navy-600);
+  --fm-text-primary: var(--fm-color-gray-900);
+  --fm-text-secondary: var(--fm-color-gray-800);
+  --fm-text-muted: var(--fm-color-gray-700);
+  --fm-surface-default: var(--fm-color-white);
+  --fm-surface-muted: var(--fm-color-gray-200);
+  --fm-surface-dark: var(--fm-color-navy-900);
+  --fm-border: var(--fm-color-gray-400);
+  --fm-focus-ring: var(--fm-color-navy-500);
+
+  /* Spacing */
+  --fm-spacing-0: 0px;
+  --fm-spacing-1: 4px;
+  --fm-spacing-2: 8px;
+  --fm-spacing-3: 12px;
+  --fm-spacing-4: 16px;
+  --fm-spacing-5: 20px;
+  --fm-spacing-6: 24px;
+  --fm-spacing-8: 32px;
+  --fm-spacing-10: 40px;
+  --fm-spacing-12: 48px;
+  --fm-spacing-16: 64px;
+
+  /* Radius */
+  --fm-radius-none: 0px;
+  --fm-radius-small: 4px;
+  --fm-radius-medium: 8px;
+  --fm-radius-large: 12px;
+  --fm-radius-xlarge: 16px;
+  --fm-radius-full: 9999px;
+
+  /* Typography */
+  --fm-font-family-sans: 'Ambra','Helvetica Neue',Helvetica,Arial,sans-serif;
+  --fm-font-family-mono: ui-monospace,SFMono-Regular,Menlo,monospace;
+  --fm-font-size-xs: 12px;
+  --fm-font-size-sm: 14px;
+  --fm-font-size-base: 16px;
+  --fm-font-size-lg: 18px;
+  --fm-font-size-xl: 20px;
+  --fm-font-size-2xl: 24px;
+  --fm-font-size-3xl: 30px;
+  --fm-font-size-4xl: 36px;
+  --fm-font-size-5xl: 48px;
+  --fm-font-weight-normal: 400;
+  --fm-font-weight-medium: 500;
+  --fm-font-weight-bold: 700;
+  --fm-line-height-tight: 1.2;
+  --fm-line-height-normal: 1.5;
+  --fm-line-height-relaxed: 1.7;
+
+  /* Shadows */
+  --fm-shadow-small: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --fm-shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --fm-shadow-large: 0 8px 24px rgba(0, 0, 0, 0.16);
+}
+
+:where(a[href], button, [role='button'], summary, input[type='button'], input[type='submit'], input[type='reset'], input[type='checkbox'], input[type='radio']):not(:disabled):not([aria-disabled='true']) {
+  cursor: pointer;
+}

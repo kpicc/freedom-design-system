@@ -1,0 +1,98 @@
+.fm-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--fm-spacing-1);
+  font-family: var(--fm-font-family-sans);
+}
+
+.fm-input-control {
+  position: relative;
+}
+
+.fm-input-clear {
+  position: absolute;
+  right: 16px;
+  top: 18px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.fm-input-clear:focus-visible {
+  outline: 2px solid var(--fm-focus-ring);
+  outline-offset: 2px;
+}
+
+.fm-input-label {
+  position: absolute;
+  left: var(--fm-spacing-4);
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--fm-text-secondary);
+  font-size: var(--fm-font-size-base);
+  pointer-events: none;
+  transition: top 150ms ease, font-size 150ms ease, color 150ms ease;
+}
+
+.fm-input {
+  width: 100%;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 20px 48px 6px 16px;
+  background: var(--fm-color-gray-100);
+  border: 1px solid #E4E4E4;
+  border-radius: 10px;
+  color: #191919;
+  font-family: var(--fm-font-family-sans);
+  font-size: var(--fm-font-size-base);
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.fm-input-control:not(:has(.fm-input-label)) .fm-input {
+  padding: var(--fm-spacing-4);
+}
+
+.fm-input:focus + .fm-input-label,
+.fm-input:not(:placeholder-shown) + .fm-input-label {
+  top: 14px;
+  font-size: var(--fm-font-size-xs);
+}
+
+.fm-input:focus {
+  border-color: var(--fm-action-primary);
+  box-shadow: 0 0 0 4px rgba(219, 92, 5, 0.15);
+}
+
+.fm-input:disabled {
+  background-color: var(--fm-surface-muted);
+  cursor: not-allowed;
+}
+
+.fm-input--error,
+.fm-input--error:focus {
+  border-color: #D92D20;
+  box-shadow: 0 0 0 4px rgba(217, 45, 32, 0.12);
+}
+
+.fm-input-error {
+  margin: 0;
+  font-size: var(--fm-font-size-sm);
+  color: #D92D20;
+}
+
+.fm-input-hint {
+  margin: 0;
+  font-size: var(--fm-font-size-sm);
+  color: var(--fm-text-secondary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fm-input,
+  .fm-input-label {
+    transition: none;
+  }
+}

@@ -1,0 +1,12 @@
+.fm-stack {
+  display: flex;
+}
+
+.fm-stack--vertical {
+  flex-direction: column;
+}
+
+.fm-stack--horizontal {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
