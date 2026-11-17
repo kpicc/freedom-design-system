@@ -78,6 +78,10 @@
   color: var(--fm-link);
 }
 
+.fm-button--link .fm-icon {
+  color: var(--fm-action-primary);
+}
+
 .fm-button--link:hover:not(:disabled) {
   color: var(--fm-link-hover);
   text-decoration: underline;
