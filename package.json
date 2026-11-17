@@ -20,6 +20,7 @@
     "dev": "vite",
     "build": "vite build",
     "docs:build": "vite build --mode docs",
+    "docs:deploy": "bash scripts/deploy-docs.sh",
     "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
