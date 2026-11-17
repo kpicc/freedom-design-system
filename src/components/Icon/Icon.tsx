@@ -17,7 +17,7 @@ for (const [path, url] of Object.entries(iconModules)) {
 const aliases: Record<string, string> = {
   phone: 'smartphone',
   chevronRight: 'chevron-right',
-  info: 'tooltip',
+  info: 'tooltip-filled',
 };
 
 export const iconNames = Object.keys(iconUrls).sort();
