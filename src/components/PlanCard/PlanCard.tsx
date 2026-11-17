@@ -104,7 +104,7 @@ export function PlanCard({
 
         {addonBanner && (
           <div className="fm-plan-card-freeze fm-plan-card-addon">
-            <Icon name="watch" size={40} className="fm-plan-card-addon-icon" />
+            <Icon name="watch" size={48} className="fm-plan-card-addon-icon" />
             <span className="fm-plan-card-freeze-text">
               {addonBanner}
               <Icon name="chevronRight" size={16} />
