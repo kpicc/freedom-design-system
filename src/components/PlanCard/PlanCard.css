@@ -295,7 +295,6 @@
   border-radius: var(--fm-radius-full);
   padding: var(--fm-spacing-4) var(--fm-spacing-6);
   cursor: pointer;
-  margin-top: auto;
   background-image: linear-gradient(to top, var(--fm-action-primary-hover) 50%, transparent 50%);
   background-size: 200% 200%;
   background-position: 0 0;
