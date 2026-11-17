@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, forwardRef } from 'react';
 import './Button.css';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'solid' | 'secondary' | 'invert';
+  variant?: 'solid' | 'secondary' | 'invert' | 'link';
   size?: 'small' | 'medium' | 'large';
   fullWidth?: boolean;
   platform?: 'desktop' | 'mobile';

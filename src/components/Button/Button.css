@@ -71,6 +71,18 @@
   color: var(--fm-color-black);
 }
 
+.fm-button--link {
+  background: none;
+  padding: 0;
+  gap: 6px;
+  color: var(--fm-link);
+}
+
+.fm-button--link:hover:not(:disabled) {
+  color: var(--fm-link-hover);
+  text-decoration: underline;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .fm-button--solid,
   .fm-button--secondary,

@@ -91,12 +91,14 @@ export function App() {
             <Button platform="desktop">Shop all plans</Button>
             <Button variant="secondary" platform="desktop">Learn more</Button>
             <Button variant="invert" platform="desktop">Shop all plans</Button>
+            <Button variant="link" platform="desktop">Link <Icon name="chevronRight" size={24} /></Button>
           </Stack>
           <Stack gap={2}>
             <span>Mobile</span>
             <Button platform="mobile">Shop all plans</Button>
             <Button variant="secondary" platform="mobile">Learn more</Button>
             <Button variant="invert" platform="mobile">Shop all plans</Button>
+            <Button variant="link" platform="mobile">Link <Icon name="chevronRight" size={24} /></Button>
           </Stack>
         </Stack>
       </section>
