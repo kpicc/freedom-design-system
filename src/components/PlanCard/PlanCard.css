@@ -16,7 +16,7 @@
   background-color: var(--fm-color-navy-500);
   color: var(--fm-color-white);
   font-family: var(--fm-font-family-sans);
-  font-size: var(--fm-font-size-sm);
+  font-size: var(--fm-font-size-base);
   font-weight: var(--fm-font-weight-bold);
   text-align: center;
 }
