@@ -85,7 +85,7 @@ export function App() {
 
       <section>
         <h2>Buttons</h2>
-        <Stack direction="horizontal" gap={6} align="center">
+        <Stack direction="horizontal" gap={12} align="center">
           <Stack gap={2}>
             <span>Desktop</span>
             <Button platform="desktop">Shop all plans</Button>
