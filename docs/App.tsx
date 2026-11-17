@@ -87,13 +87,13 @@ export function App() {
         <h2>Buttons</h2>
         <Stack direction="horizontal" gap={6} align="center">
           <Stack gap={2}>
-            <span>Desktop — 16px</span>
+            <span>Desktop</span>
             <Button platform="desktop">Shop all plans</Button>
             <Button variant="secondary" platform="desktop">Learn more</Button>
             <Button variant="invert" platform="desktop">Shop all plans</Button>
           </Stack>
           <Stack gap={2}>
-            <span>Mobile — 14px</span>
+            <span>Mobile</span>
             <Button platform="mobile">Shop all plans</Button>
             <Button variant="secondary" platform="mobile">Learn more</Button>
             <Button variant="invert" platform="mobile">Shop all plans</Button>
