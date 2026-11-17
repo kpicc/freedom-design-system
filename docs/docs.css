@@ -140,7 +140,13 @@ body {
 
 .docs-plans {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(0, 352px));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--fm-spacing-6);
   padding-top: var(--fm-spacing-4);
+}
+
+@media (max-width: 768px) {
+  .docs-plans {
+    grid-template-columns: 1fr;
+  }
 }
