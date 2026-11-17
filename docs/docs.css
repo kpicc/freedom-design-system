@@ -50,7 +50,7 @@ body {
 
 
 .docs {
-  max-width: 960px;
+  max-width: 1152px;
   margin: 0 auto;
   padding: var(--fm-spacing-8) var(--fm-spacing-6);
   display: flex;
@@ -140,7 +140,8 @@ body {
 
 .docs-plans {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 352px));
+  justify-content: space-between;
   gap: var(--fm-spacing-6);
   padding-top: var(--fm-spacing-4);
 }
