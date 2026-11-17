@@ -35,6 +35,7 @@ export function Icon({
   name,
   size = 24,
   color,
+  className,
   style,
   ...rest
 }: IconProps) {
@@ -43,7 +44,7 @@ export function Icon({
 
   return (
     <span
-      className={`fm-icon fm-icon--${name}`}
+      className={`fm-icon fm-icon--${name}${className ? ` ${className}` : ''}`}
       role="img"
       aria-hidden="true"
       style={{
