@@ -86,7 +86,7 @@ export function PlanCard({
       <div className="fm-plan-card-body">
         {regionTitle && (
           <p className="fm-plan-card-region">
-            <Icon name="phone" size={18} />
+            <Icon name="coverage" size={18} />
             {regionTitle}
             <Icon name="info" size={16} />
           </p>
