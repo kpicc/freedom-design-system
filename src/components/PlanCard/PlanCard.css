@@ -198,6 +198,7 @@
 
 /* Price Freeze banner */
 .fm-plan-card-freeze {
+  margin-top: auto;
   display: flex;
   align-items: center;
   gap: var(--fm-spacing-3);
@@ -216,6 +217,10 @@
   .fm-plan-card-freeze:hover .fm-icon--chevronRight {
     transform: translateX(4px);
   }
+}
+
+.fm-plan-card-addon ~ .fm-plan-card-freeze {
+  margin-top: 0;
 }
 
 .fm-plan-card-addon .fm-plan-card-addon-icon {
