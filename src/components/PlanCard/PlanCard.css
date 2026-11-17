@@ -9,13 +9,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  padding: 14px 12px 28px;
+  right: 0;
+  padding: 6px 12px 30px;
   border-radius: 20px 20px 0 0;
   background-color: var(--fm-color-navy-500);
   color: var(--fm-color-white);
   font-family: var(--fm-font-family-sans);
-  font-size: var(--fm-font-size-base);
-  font-weight: var(--fm-font-weight-normal);
+  font-size: var(--fm-font-size-sm);
+  font-weight: var(--fm-font-weight-bold);
+  text-align: center;
 }
 
 .fm-plan-card {
@@ -35,10 +37,10 @@
 /* Navy header */
 .fm-plan-card-header {
   background: linear-gradient(to right, var(--fm-color-navy-900), var(--fm-color-black));
-  padding: var(--fm-spacing-5) var(--fm-spacing-5) var(--fm-spacing-6);
+  padding: var(--fm-spacing-4) var(--fm-spacing-5) var(--fm-spacing-5);
   display: flex;
   flex-direction: column;
-  gap: var(--fm-spacing-3);
+  gap: var(--fm-spacing-2);
 }
 
 .fm-plan-card-tag {
@@ -49,7 +51,7 @@
   font-size: var(--fm-font-size-base);
   font-weight: var(--fm-font-weight-normal);
   border-radius: var(--fm-radius-full);
-  padding: var(--fm-spacing-2) var(--fm-spacing-4);
+  padding: var(--fm-spacing-1) var(--fm-spacing-4);
 }
 
 .fm-plan-card-allowance {
@@ -124,10 +126,10 @@
 
 /* White body */
 .fm-plan-card-body {
-  padding: var(--fm-spacing-5);
+  padding: var(--fm-spacing-4) var(--fm-spacing-5) var(--fm-spacing-5);
   display: flex;
   flex-direction: column;
-  gap: var(--fm-spacing-4);
+  gap: var(--fm-spacing-3);
   flex: 1;
 }
 
@@ -198,10 +200,10 @@
 .fm-plan-card-freeze {
   display: flex;
   align-items: center;
-  gap: var(--fm-spacing-4);
+  gap: var(--fm-spacing-3);
   background-color: var(--fm-color-navy-950);
   border-radius: var(--fm-radius-medium);
-  padding: var(--fm-spacing-4);
+  padding: var(--fm-spacing-3);
   cursor: pointer;
   transition: background-color 200ms ease, box-shadow 200ms ease;
 }
@@ -230,8 +232,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border: 2px solid var(--fm-color-brand-500);
   border-radius: var(--fm-radius-full);
   color: var(--fm-color-brand-400);
